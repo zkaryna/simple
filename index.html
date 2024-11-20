@@ -209,23 +209,7 @@
         sidemenu.style.right = "-200px";
     }    
 </script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyB-xyD6ThCKm4qi6cT6q8Fm84ynVt4SsJPt0ofcU4_mWUCXKnSWErA80OEFlsTw3BNMg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const message = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {message.innerHTML = "Message sent successfully" 
-            setTimeout(function(){
-                message.innerHTML =""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+
 
 
 </body>
